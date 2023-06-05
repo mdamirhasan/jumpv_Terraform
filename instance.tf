@@ -1,11 +1,11 @@
 resource "aws_key_pair" "jumpv_key" {
-  key_name   = "aws_key"
-  public_key = file("/home/shtlp0133/Music/office-projects/Jumpv/jumpv.pub")
+  key_name   = "jumpv"
+  public_key = file("/home/shtlp0133/Music/office-projects/Jumpv/Jumpv_Terraform/jumpv.pub")
 }
 
 resource "aws_instance" "jumpv" {
   ami                         = "ami-053b0d53c279acc90"
-  instance_type               = "t2.micro"
+  instance_type               = "t2.medium"
   subnet_id                   = aws_subnet.us-east-1b.id
   security_groups             = [aws_security_group.jumpv.id]
   associate_public_ip_address = true
