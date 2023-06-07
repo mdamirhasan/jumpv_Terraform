@@ -67,7 +67,7 @@ This configuration file allows the instance to receive traffic from the ALB thro
 
 provider block is used in which region & account we want to create the infrastructure.
 
-## (7) resources.tf
+## (7) vpc.tf
 
 (i) resource “aws_vpc”: To create vpc in aws.
 
@@ -101,10 +101,10 @@ provider block is used in which region & account we want to create the infrastru
     git clone https://github.com/mdamirhasan/jumpv_Ansible.git
 
 3. Change path of key in instance.tf in line no. 3:
-![](https://github.com/mdamirhasan/jumpv_Terraform.git)
+https://github.com/mdamirhasan/jumpv_Terraform.git)
 
 4. Change path in line no. 12,26 & 41 in ansible.tf [ The path should be change where you clone your Ansible playbook & "jumpv_key"]
-![](https://github.com/mdamirhasan/jumpv_Terraform.git)
+https://github.com/mdamirhasan/jumpv_Terraform.git
 
 ## Following is the steps to run the script:
 
@@ -127,9 +127,7 @@ Please copy Django-settings-fo-JumpV.txt and pase in setting.py file and
 Django-settings-for-JumpV.txt and paste in wsgi.py.
 
 
-## Cleanup the Infrastructure
-
-    terraform destroy
+## That's all Thank You 
 
 
 
