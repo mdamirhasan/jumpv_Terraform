@@ -30,7 +30,7 @@ This configuration file allows the instance to receive traffic from the ALB thro
 (iii) output “instance_public_ip”: this resource is used to give instance ip in the output.
 
 
-## (5) ansible.tf
+## (3) ansible.tf
 
 ## when you run ansible playbook locally:
 
@@ -48,14 +48,14 @@ This configuration file allows the instance to receive traffic from the ALB thro
 
 (iii)resource “null_resource”: this block is used to run the ansible playbook.
 
-## (6) rds.tf 
+## (4) rds.tf 
 
 (i) resource “aws_db_subnet_group”: this subnet group resources is used to creates an Amazon RDS database subnet group resource. 
 
 (ii) resource “aws_db_instance”: This resource group is used to create a database
 
 
-## (7) igw.tf
+## (5) igw.tf
 
 (i)  resource “aws_internet_gateway”: This resource group is used to creates an Amazon VPC internet gateway resource. 
 
@@ -63,11 +63,11 @@ This configuration file allows the instance to receive traffic from the ALB thro
 
 (iii) resource “aws_route_table_association”: This resource group is used to creates an Amazon VPC route table association resource. 
 
-## (8) provider.tf
+## (6) provider.tf
 
 provider block is used in which region & account we want to create the infrastructure.
 
-## (9) resources.tf
+## (7) resources.tf
 
 (i) resource “aws_vpc”: To create vpc in aws.
 
@@ -103,7 +103,7 @@ provider block is used in which region & account we want to create the infrastru
 3. Change path of key in instance.tf in line no. 3:
 ![](https://github.com/mdamirhasan/jumpv_Terraform.git)
 
-4. Change path in line no. 12,26 & 41 in ansible.tf [ The path should be change where you clone your Ansible playbook & "bvr-testing_key"]
+4. Change path in line no. 12,26 & 41 in ansible.tf [ The path should be change where you clone your Ansible playbook & "jumpv_key"]
 ![](https://github.com/mdamirhasan/jumpv_Terraform.git)
 
 ## Following is the steps to run the script:
