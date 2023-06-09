@@ -1,7 +1,7 @@
 resource "null_resource" "instance-id" {
       depends_on = [
          aws_instance.jumpv,
-#         aws_cloudfront_distribution.example
+#         aws_cloudfront_distribution.jumpv
       ]
 
       triggers = {
@@ -16,7 +16,7 @@ resource "null_resource" "instance-id" {
 resource "null_resource" "ansible-host" {
       depends_on = [
          aws_instance.jumpv,
-#         aws_cloudfront_distribution.example
+#         aws_cloudfront_distribution.jumpv
       ]
 
       triggers = {
@@ -30,7 +30,7 @@ resource "null_resource" "ansible-host" {
 resource "null_resource" "ansible-playbook" {
       depends_on = [
         null_resource.ansible-host,
-#        aws_cloudfront_distribution.example
+#        aws_cloudfront_distribution.jumpv
       ]
 
       triggers = {

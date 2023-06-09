@@ -23,7 +23,7 @@ This configuration file allows the instance to receive traffic from the ALB thro
 
 ## (2) instance.tf:
 
-(i) resource “aws_instance”: this resource group is used to create an standby instance which os: ubuntu 20.04 LTS.
+(i) resource “aws_instance”: this resource group is used to create an instance which os: ubuntu 20.04 LTS. Ansible Playbook run on the instance.
 
 (ii) ebs_block_device: as per now I am taking dump of database & importing it on the same machine so this block is used to increase the storage of the machine.
 
@@ -50,9 +50,7 @@ This configuration file allows the instance to receive traffic from the ALB thro
 
 ## (4) rds.tf 
 
-(i) resource “aws_db_subnet_group”: this subnet group resources is used to creates an Amazon RDS database subnet group resource. 
-
-(ii) resource “aws_db_instance”: This resource group is used to create a database
+(i) resource “aws_db_instance”: This resource group is used to create a database.
 
 
 ## (5) igw.tf
@@ -128,22 +126,3 @@ Django-settings-for-JumpV.txt and paste in wsgi.py.
 
 
 ## That's all Thank You 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
